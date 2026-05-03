@@ -1,16 +1,21 @@
 import React from 'react'
 import Container from '../Components/Layout/Container'
+import { IoMdMail } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { RiWhatsappFill } from "react-icons/ri";
+import { MdWatchLater } from "react-icons/md";
 
 function Footer() {
   const primaryColor = "#43464E"
-  
+
   const quickLinks = [
     { name: "About Us", href: "#about" },
     { name: "Services", href: "#price" },
     { name: "Pricing", href: "#price" },
     { name: "Book a Session", href: "#booking" }
   ]
-  
+
   const services = [
     "Dry Massage",
     "Oil Massage",
@@ -19,7 +24,7 @@ function Footer() {
     "Nuru Massage",
     "Body Scrub"
   ]
-  
+
   const socialLinks = [
     { name: "Facebook", icon: "📘", url: "https://facebook.com" },
     { name: "Instagram", icon: "📷", url: "https://instagram.com" },
@@ -31,115 +36,119 @@ function Footer() {
     <footer className="text-white pt-16 pb-8" style={{ backgroundColor: primaryColor }}>
       <Container>
         {/* TOP SECTION */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-10 md:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-10 md:mb-12">
 
-  {/* ABOUT */}
-  <div className="sm:col-span-2 lg:col-span-1">
-    <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
-      Zenvy Spa Gulshan
-    </h3>
+          {/* ABOUT */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+              Zenvy Spa Gulshan
+            </h3>
 
-    <p className="text-white/80 text-sm md:text-base leading-relaxed">
-      Experience tranquility and rejuvenation in the heart of Gulshan.
-      Your wellness journey begins here.
-    </p>
+            <p className="text-white/80 text-sm md:text-base leading-relaxed">
+              Experience tranquility and rejuvenation in the heart of Gulshan.
+              Your wellness journey begins here.
+            </p>
 
-    {/* SOCIAL */}
-    
-  </div>
+            {/* SOCIAL */}
 
-  {/* QUICK LINKS + SERVICES SIDE BY SIDE */}
-  <div className="sm:col-span-2 lg:col-span-2 grid grid-cols-2 gap-8 md:gap-10">
+          </div>
 
-    {/* QUICK LINKS */}
-    <div>
-      <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">
-        Quick Links
-      </h3>
+          {/* QUICK LINKS + SERVICES SIDE BY SIDE */}
+          <div className="sm:col-span-2 lg:col-span-2 grid grid-cols-2 gap-8 md:gap-10">
 
-      <ul className="space-y-2 text-sm md:text-base">
-        {quickLinks.map((link, idx) => (
-          <li key={idx}>
-            <a
-              href={link.href}
-              className="text-white/80 hover:text-white transition"
-            >
-              {link.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+            {/* QUICK LINKS */}
+            <div>
+              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">
+                Quick Links
+              </h3>
 
-    {/* SERVICES */}
-    <div>
-      <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">
-        Our Services
-      </h3>
+              <ul className="space-y-2 text-sm md:text-base">
+                {quickLinks.map((link, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={link.href}
+                      className="text-white/80 hover:text-white transition"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-      <ul className="space-y-2 text-sm md:text-base">
-        {services.map((service, idx) => (
-          <li key={idx}>
-            <a
-              href="#price"
-              className="text-white/80 hover:text-white transition"
-            >
-              {service}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+            {/* SERVICES */}
+            <div>
+              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">
+                Our Services
+              </h3>
 
-  </div>
+              <ul className="space-y-2 text-sm md:text-base">
+                {services.map((service, idx) => (
+                  <li key={idx}>
+                    <a
+                      href="#price"
+                      className="text-white/80 hover:text-white transition"
+                    >
+                      {service}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-</div>
+          </div>
 
-{/* BOTTOM SECTION - GET IN TOUCH */}
-<div className="border-t border-white/20 pt-8 pb-2">
+        </div>
 
-  <h3 className="text-lg md:text-xl font-semibold mb-4 ">
-    Get in Touch
-  </h3>
+        {/* BOTTOM SECTION - GET IN TOUCH */}
+        <div className="border-t border-white/20 pt-8 pb-2">
 
-  <ul className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm md:text-base  md:text-left">
+          <h3 className="text-lg md:text-xl font-semibold mb-4 ">
+            Get in Touch
+          </h3>
 
-    <li className="flex md:justify-start gap-2">
-      <span>📍</span>
-      <span className="text-white/80">
-        Gulshan 2,Dhaka 1212,premier destination for rejuvenation
-      </span>
-    </li>
+          <ul className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm md:text-base  md:text-left items-center">
 
-    <li className="flex md:justify-start gap-2">
-      <span>📞</span>
-      <a href="tel:+8801863-905937" className="text-white/80 hover:text-white">
-        01863-905937
-      </a>
-    </li>
+            <li className="flex md:justify-start gap-2">
+              <span>📍</span>
+              <span className="text-white/80">
+                Gulshan 2,Dhaka 1212,premier destination for rejuvenation
+              </span>
+            </li>
 
-    <li className="flex md:justify-start gap-2">
-      <span>✉️</span>
-      <a href="mailto:zenvyspagulshan@gmail.com" className="text-white/80 hover:text-white">
-        zenvyspagulshan@gmail.com
-      </a>
-    </li>
+            <li className="flex items-center md:justify-start gap-2">
+              <FaPhoneAlt size={16} />
+              <a href="tel:+8801863-905937" className="text-white/80 hover:text-white">
+                +8801863905937
+              </a>
+            </li>
+            <li className="flex items-center md:justify-start gap-2">
+              <RiWhatsappFill size={20} />
+              <a href="https://wa.me/8801863905937?text=Hi%2C%20I%20want%20to%20book%20a%20session" className="text-white/80 hover:text-white">
+                +8801863905937
+              </a>
+            </li>
+            <li className="flex items-center md:justify-start gap-2">
+              <AiFillInstagram size={20} />
+              <a href="https://instagram.com" className="text-white/80 hover:text-white">
+                @zenvyspagulshan
+              </a>
+            </li>
+            <li className="flex items-center md:justify-start gap-2">
+              <IoMdMail size={20} />
+              <a href="mailto:zenvyspagulshan@gmail.com" className="text-white/80 hover:text-white">
+                zenvyspagulshan@gmail.com
+              </a>
+            </li>
+            <li className="flex items-center md:justify-start gap-2">
+              <MdWatchLater size={22} />
+              <span className="text-white/80">
+                9AM - 10PM
+              </span>
+            </li>
+          </ul>
 
-    <li className="flex  md:justify-start gap-2">
-      <span>🕒</span>
-      <span className="text-white/80">
-        9AM - 10PM
-      </span>
-    </li>
-<li className="flex  md:justify-start gap-2">
-      <span>❤️</span>
-      <span className="text-white/80">
-        Made by Mridul
-      </span>
-    </li>
-  </ul>
-
-</div>
+        </div>
 
         {/* Copyright Bar */}
         <div className="border-t border-white/20 pt-8 text-center text-white/70 text-sm">

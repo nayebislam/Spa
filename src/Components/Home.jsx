@@ -16,7 +16,7 @@ const Home = () => {
 
       {/* Main Content Wrapper */}
       <main className="flex-1 w-full ">
-        
+
         {/* Sections use inner Containers for horizontal padding */}
         <section className="w-full  sm:py-10">
           <About />

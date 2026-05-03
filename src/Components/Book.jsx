@@ -315,7 +315,7 @@ function Book() {
             {step > 1 && (
               <button
                 onClick={back}
-                className="w-1/2 py-3 border border-gray-300 rounded-xl font-medium hover:bg-gray-50 transition-colors"
+                className="w-1/2 py-3 border border-gray-300 rounded-xl font-medium hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 ← Back
               </button>
@@ -330,7 +330,7 @@ function Book() {
                   (step === 3 && !isStep3Valid)
                 }
                 onClick={next}
-                className={`py-3 rounded-xl text-white font-semibold disabled:opacity-40 transition-opacity
+                className={`py-3 rounded-xl text-white font-semibold disabled:opacity-40 transition-opacity cursor-pointer
                   ${step === 1 ? "w-full" : "w-1/2"}`}
                 style={{ backgroundColor: primaryColor }}
               >
